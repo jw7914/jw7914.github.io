@@ -3,56 +3,85 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252A;
-}
-.logo {
-    display: inline;
-    width: 90px;
-    height: 90px;
-    margin-right: auto;
-    padding-top: 10px;
-    cursor: pointer;
-
-}
-
-h1 {
-    color: white;
-    padding: 40px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.nav-bar {
-    position: sticky;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 5);
-}
-
-.nav-list {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
     list-style: none;
-    display: flex;
-    padding: 0px 20px;
-}
-
-
-.nav-list, a {
     text-decoration: none;
-    color: white;
-    transition: all 0.5s ease 0s;
-}
-.nav-list a:hover {
-    color:#5B7B7A;
-    border-bottom: 2px solid #FFCDA2;
 }
 
-.nav-bar-items {
-    padding: 40px;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-header {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: #24252A;
     display: flex;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 3);
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
+}
+
+.logo-img {
+    margin-left: auto;
+    padding-bottom: -100px;
+    width: 15%;
+    height: 1%;
+    padding: 20px;
+    left: 0px;
+    display: inline;
+}
+
+.logo-text {
+    padding-top: 30px;
+    margin-top: 30px;
+    font-size: 25px;
+    color: white;
+    background: #24252A;
+    font-weight: 600;
+    transition: 0.3s ease;
+    display: inline;
+
+}
+
+.logo:hover {
+    color: lightblue;
+    text-shadow: 0 0 25px lightblue, 0 0 50px lightblue;
+    transform: scale(1.1);
+}
+.navbar {
+    background: #24252A;
+}
+.navbar a {
+    background: #24252A;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0 20px;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid #FDF4DC;
+    transition: transform 0.5s ease-in;
+    transform: scale(1.1);
+    text-shadow: 0 0 25px #3E8989, 0 0 50px #3E8989;
+}
+
+.contact {
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact:hover {
+    background-color: aqua;
+    box-shadow: 0 0 25px aqua;
 }
