@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 35px 12%;
+    padding: 35px 2%;
     background: #24252A;
     display: flex;
     backdrop-filter: blur(10px);
@@ -44,30 +44,95 @@
     font-weight: 600;
     transition: 0.3s ease;
     display: inline;
+}
 
+.logo {
+    background: #24252A;
 }
 
 .logo:hover {
     color: lightblue;
     text-shadow: 0 0 25px lightblue, 0 0 50px lightblue;
     transform: scale(1.1);
+    background: #24252A;
 }
+
 .navbar {
     background: #24252A;
 }
+
 .navbar a {
     background: #24252A;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 550;
     color: white;
     margin: 0 20px;
 }
 
 .navbar a:hover {
     border-bottom: 3px solid #FDF4DC;
+    text-shadow: 0 0 25px lightblue, 0 0 50px lightblue, 0 0 75px lightblue;
     transition: transform 0.5s ease-in;
     transform: scale(1.1);
-    text-shadow: 0 0 25px #3E8989, 0 0 50px #3E8989;
+}
+
+.aboutme {
+    width: 100%;
+    min-height: 100vh;
+    background: #24252A;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+
+}
+
+.aboutme-content {
+    background: #24252A;
+    max-width: 800px;
+}
+
+.aboutme-content h1 {
+    background: #24252A;
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.aboutme-content h3 {
+    background: #24252A;
+    font-size: 42px;
+}
+
+.aboutme-content p {
+    background: #24252A;
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.btn-resume {
+    background: #24252A;
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+
+.download-resume {
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.download-resume:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 .contact {
@@ -83,6 +148,10 @@
 }
 
 .contact:hover {
-    background-color: aqua;
-    box-shadow: 0 0 25px aqua;
+    background-color: lightblue;
+    box-shadow: 0 0 25px lightblue;
+}
+
+html {
+    scroll-behavior: smooth;
 }
