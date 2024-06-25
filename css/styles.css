@@ -1,3 +1,5 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -9,23 +11,33 @@
     text-decoration: none;
 }
 
+p {
+    color: rgb(85, 85, 85);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
 .header {
+    background-color: navy;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 35px 2%;
-    background: #24252A;
     display: flex;
     backdrop-filter: blur(10px);
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 3);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 3);
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     opacity: 90%;
 }
 
-.logo-img {
+
+/* .logo-img {
     margin-left: auto;
     padding-bottom: -100px;
     width: 15%;
@@ -34,89 +46,137 @@
     left: 0px;
     display: inline;
 }
+*/
 
 .logo-text {
+    background-color: navy;
     padding-top: 30px;
     margin-top: 30px;
     font-size: 25px;
     color: white;
-    background: #24252A;
     font-weight: 600;
     transition: 0.3s ease;
     display: inline;
 }
 
 .logo {
-    background: #24252A;
+    background-color: navy;
 }
 
 .logo:hover {
     color: lightblue;
     text-shadow: 0 0 25px lightblue, 0 0 50px lightblue;
     transform: scale(1.1);
-    background: #24252A;
 }
 
 .navbar {
-    background: #24252A;
+    background-color: navy;
 }
 
 .navbar a {
-    background: #24252A;
     font-size: 20px;
     font-weight: 550;
     color: white;
     margin: 0 20px;
+    background-color: navy;
 }
 
 .navbar a:hover {
-    border-bottom: 3px solid #FDF4DC;
+    border-bottom: 3px solid black;
     text-shadow: 0 0 25px lightblue, 0 0 50px lightblue, 0 0 75px lightblue;
     transition: transform 0.5s ease-in;
     transform: scale(1.1);
 }
 
-.aboutme {
-    width: 100%;
-    min-height: 100vh;
-    background: #24252A;
+/* Sections */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
     display: flex;
+}
+
+
+/* About Me */
+#aboutme {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 100vh;
     align-items: center;
-    gap: 7em;
     padding: 30px 12% 0;
 
 }
 
-.aboutme-content {
-    background: #24252A;
-    max-width: 800px;
-}
-
-.aboutme-content h1 {
-    background: #24252A;
-    font-size: 50px;
-    line-height: 1.2;
-}
-
-.aboutme-content h3 {
-    background: #24252A;
-    font-size: 42px;
-}
-
-.aboutme-content p {
-    background: #24252A;
-    font-size: 18px;
-    margin: 25px 0 30px;
-}
-
-.btn-resume {
-    background: #24252A;
-    width: 345px;
+/*
+#aboutme {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+
+*/
+.aboutme-person-img {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+    
+}
+
+.aboutme-person-img img {
+    border-radius: 100%;
+}
+
+.aboutme-text {
+    align-self: center;
+    text-align: center;
+}
+.aboutme-text-h3 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.aboutme-text-p {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.aboutme-text-h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* Icons */
+.icons {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* Buttons */
+.btn-container {
+    width: 345px;
+    justify-content: center;
     gap: 2em;
 }
 
-.download-resume {
+.btn-resume, .btn-contact {
     padding: 15px 20px;
     background-color: black;
     color: white;
@@ -129,42 +189,24 @@
     cursor: pointer;
 }
 
-.download-resume:hover {
+.btn-resume:hover, .btn-contact:hover {
     background-color: white;
     box-shadow: 0 0 25px white;
     color: black;
-}
-
-.contact {
-    padding: 15px 20px;
-    background-color: black;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.contact:hover {
-    background-color: white;
-    box-shadow: 0 0 25px white;
-    color: black;
+    border-color: black;
 }
 
 .person-img {
-    background-color: #24252A;
+    
 }
 
 .person-img img{
-    border-radius: 40%;
+    border-radius: 100%;
     width: 300px;
-    height: 500px;
-    background-color: #24252A;
+    height: 300px;
+    
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
+
+

@@ -10,6 +10,7 @@
     <link rel="icon" href="./assets/logo2.png" />
 </head>
 <body>
+    <!-- Navbar Contents -->
     <header class="header">
         <div class="logo">
             <a href="#top" class="logo-text">Jason Wu</a>
@@ -24,24 +25,32 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
         </nav>
-
     </header>
 
-    <section class="aboutme">
-        <div class="aboutme-content">
-            <h3>Hi</h3>
-            <h1>I'm Jason <br> an aspiring Software Engineer</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <div class="btn-resume">
-                <button class="download-resume">Resume</button>
-                <a class="contact" href="#contact">Contact Me</a>
+    <!-- About Me Section -->
+    <section id="aboutme">
+        <div class="aboutme-text">
+            <h3 class="aboutme-text-h3">Hello,</h3>
+            <h1 class="aboutme-text-h1"> I'm Jason</h1>
+            <p class="aboutme-text-p">Student at New York University's Tandon School of Engineering 
+                pursuing a Bachelor of Science in Computer Science with a minor in Cybersecurity.
+            </p>
+            <div class="btn-container">
+                <button class="btn-resume" onclick="window.open('./assets/Jason_Wu_Resume.pdf')">Resume</button>
+                <button class="btn-contact" onclick="location.href='./#contact'">Contact Me</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My Linkedin Page" class="icons" 
+                onclick="location.href='https://www.linkedin.com/in/jason-wu-3656b2241/'"/>
+                <img src="./assets/github.png" alt="My GitHub Page" class="icons" 
+                onclick="location.href='https://github.com/jw7914'"/>
             </div>
         </div>
-        <div class="person-img">
-            <img src="./assets/2.png" alt="image of me">
+        <div class="aboutme-person-img">
+            <img src="./assets/2.png" alt="Jason Profile Picture">
         </div>
     </section>
    
-
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
