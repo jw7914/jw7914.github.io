@@ -212,7 +212,7 @@ section {
 /* ---------- Contact Me ---------- */
 
 /* Buttons */
-.btn-contact {
+.submit-contact {
     font-weight: 600;
     padding: 15px 20px;
     background-color: black;
@@ -225,6 +225,7 @@ section {
     transition: 0.3s ease;
     cursor: pointer;
     border-radius: 2rem;
+    width: 100%;
 }
 
 .btn-contact:hover {
