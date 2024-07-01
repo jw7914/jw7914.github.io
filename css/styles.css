@@ -1,4 +1,4 @@
-/* Global */
+/* ---------- Global ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -19,14 +19,14 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* ---------- Navbar ---------- */
 .header {
     background-color: navy;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 35px 2%;
+    padding: 15px 2%;
     display: flex;
     backdrop-filter: blur(10px);
     box-shadow: 0 15px 10px rgba(0, 0, 0, 3);
@@ -88,7 +88,7 @@ html {
     transform: scale(1.1);
 }
 
-/* Sections */
+/* ---------- Sections ---------- */
 section {
     padding-top: 4vh;
     height: 96vh;
@@ -102,8 +102,8 @@ section {
 }
 
 
-/* About Me */
-#aboutme {
+/* ---------- About Me ---------- */
+#profile {
     display: flex;
     justify-content: center;
     gap: 5rem;
@@ -114,7 +114,7 @@ section {
 }
 
 /*
-#aboutme {
+#profile {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -124,7 +124,7 @@ section {
 }
 
 */
-.aboutme-person-img {
+.profile-person-img {
     display: flex;
     height: 400px;
     width: 400px;
@@ -132,26 +132,26 @@ section {
     
 }
 
-.aboutme-person-img img {
+.profile-person-img img {
     border-radius: 100%;
 }
 
-.aboutme-text {
+.profile-text {
     align-self: center;
     text-align: center;
 }
-.aboutme-text-h3 {
+.profile-text-h3 {
     font-weight: 600;
     text-align: center;
     font-size: 2rem;
 }
 
-.aboutme-text-p {
+.profile-text-p {
     font-weight: 600;
     text-align: center;
     margin-bottom: 3rem;
 }
-.aboutme-text-h1 {
+.profile-text-h1 {
     font-size: 3rem;
     text-align: center;
 }
@@ -169,14 +169,26 @@ section {
     height: 2.5rem;
 }
 
+#github, #linkedin {
+    border-radius: 100%;
+}
+
+.icons:hover {
+    cursor: pointer;
+    height: 3rem;
+    box-shadow: 0 0 35px black;
+}
+
 /* Buttons */
 .btn-container {
+    display: flex;
     width: 345px;
     justify-content: center;
-    gap: 2em;
+    gap: 1rem;
 }
 
 .btn-resume, .btn-contact {
+    font-weight: 600;
     padding: 15px 20px;
     background-color: black;
     color: white;
@@ -187,6 +199,7 @@ section {
     font-weight: 600;
     transition: 0.3s ease;
     cursor: pointer;
+    border-radius: 2rem;
 }
 
 .btn-resume:hover, .btn-contact:hover {
@@ -196,17 +209,59 @@ section {
     border-color: black;
 }
 
-.person-img {
-    
+/* ---------- Contact Me ---------- */
+
+/* Buttons */
+.btn-contact {
+    font-weight: 600;
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 2rem;
 }
 
-.person-img img{
-    border-radius: 100%;
-    width: 300px;
-    height: 300px;
-    
+.btn-contact:hover {
+    background-color: white;
+    box-shadow: 0 0 25px white;
+    color: black;
+    border-color: black;
 }
 
+.contact-form h2 {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size:  36px;
+}
 
+.contact-form form {
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
 
+.contact-form form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.contact-form form .input-box input, 
+.contact-form form textarea {
+    width: 100%;
+    padding: 1.5em;
+    font-size: 18px;
+    color: black;
+    background-color: rgb(241, 241, 241);
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    resize: none;;
+}
