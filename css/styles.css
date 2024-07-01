@@ -19,9 +19,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.separator {
+    border-bottom: 1px solid grey;
+    margin: 20px auto;
+    width: 90%;
+}
+
 /* ---------- Navbar ---------- */
 .header {
-    background-color: navy;
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -49,18 +55,18 @@ html {
 */
 
 .logo-text {
-    background-color: navy;
+    background-color: white;
     padding-top: 30px;
     margin-top: 30px;
     font-size: 25px;
-    color: white;
+    color: black;
     font-weight: 600;
     transition: 0.3s ease;
     display: inline;
 }
 
 .logo {
-    background-color: navy;
+    background-color: white;
 }
 
 .logo:hover {
@@ -70,15 +76,15 @@ html {
 }
 
 .navbar {
-    background-color: navy;
+    background-color: white;
 }
 
 .navbar a {
     font-size: 20px;
     font-weight: 550;
-    color: white;
+    color: black;
     margin: 0 20px;
-    background-color: navy;
+    background-color: white;
 }
 
 .navbar a:hover {
