@@ -1,0 +1,170 @@
+/* ---------- Global ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    color: rgb(85,85,85);
+}
+
+.separator {
+    border-bottom: 1px solid grey;
+    margin: 20px auto;
+    width: 90%;
+}
+
+a, .btn {
+    transition: all 300ms ease;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 3);
+    opacity: 90%;
+}
+/* ---------- Navbar ---------- */
+/* Desktop */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-links {
+    gap: 3rem;
+    list-style: none;
+    font-size: 1.2rem;
+    margin-right: 5rem;
+}
+
+.nav-links a {
+    font-weight: 550;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.nav-links a:hover {
+    text-decoration: underline 0.25rem;
+    text-shadow: 0 0 25px lightblue, 0 0 50px lightblue, 0 0 75px lightblue;
+    text-underline-offset: 0.5rem;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.logo a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    font-weight: 600;
+}
+
+.logo:hover {
+    color: lightblue;
+    text-shadow: 0 0 25px lightblue, 0 0 50px lightblue;
+    transform: scale(1.1);
+}
+
+/* Mobile */
+.mobile-nav {
+    display: none;
+}
+
+.mobile-menu {
+    position: relative;
+    display: inline-block;
+    margin-right: 5rem;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 2rem;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    margin-top: 2.2rem;
+    position: absolute;
+    top: 100%;
+    margin-right: -3.5rem;
+    width: fit-content;
+    right: 0;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 3);
+    background: white;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+    opacity: 1;
+}
+
+
+
+
