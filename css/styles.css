@@ -40,6 +40,11 @@ a, .btn {
     backdrop-filter: blur(10rem);
 }
 
+.site {
+    overflow-x: hidden;
+    position: relative;
+}
+
 /* Sections */
 section {
     padding-top: 4vh;
@@ -278,3 +283,136 @@ nav {
     color:black;
 }
 
+
+/* ---------- Certificates ---------- */
+.certificates {
+    margin: 0rem;
+    overflow-x: hidden;
+}
+
+#image-track .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    box-shadow: 0 0 25px black;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 4vmin;
+    right: 0px;
+    user-select: none;
+}
+
+#image-track h1 {
+    writing-mode: vertical-rl;
+    font-size: 50px; /* 30px for mobile */
+    transform: rotate(180deg) translate(0%, 7vmin);
+    background: none;
+    width: 20vmin;
+    height: 63vmin;
+    margin-right: -4vmin;
+    margin-left: -2vmin;
+}
+
+.certificate-container .view {
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.scroll {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.scroll h1{
+    padding-right: 20px;
+}
+
+/* ---------- Projects ---------- */
+.projects {
+    background-color: white;
+    padding: 32px 0;
+    margin-top: 2rem;
+}
+
+.project-pic {
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-container {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}
+
+.project-container p {
+    padding: 0.4rem;
+}
+
+.project-title {
+    margin-bottom: 0.5rem;
+}
+
+.project-details {
+    margin-bottom: 0.5rem;
+}
+.project-card {
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 3px 10px #8b8eaf;
+    padding: 20px;
+    margin: 10px;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    background: none;
+}
+
+.project-btn:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+    cursor: pointer;
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+/* Animations */
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(10px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

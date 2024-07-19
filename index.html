@@ -12,75 +12,153 @@
     <script defer src="./js/nav.js"></script>
 </head>
 <body>
-
-    <!-- Navbar Contents -->
-    <header class="header desktop">
-        <nav class="desktop-nav">
-            <div class="logo"><a href="#profile">Jason Wu</a></div>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-
-        <nav class="mobile-nav">
-            <div class="logo"><a href="#profile">Jason Wu</a></div>
-            <div class="mobile-menu">
-                <div class="hamburger-icon"  onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <div class="site">
+    
+        <!-- Navbar Section -->
+        <header class="header desktop">
+            <nav class="desktop-nav">
+                <div class="logo"><a href="#profile">Jason Wu</a></div>
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+    
+            <nav class="mobile-nav">
+                <div class="logo"><a href="#profile">Jason Wu</a></div>
+                <div class="mobile-menu">
+                    <div class="hamburger-icon"  onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-links">
+                        <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
+                        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                        <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
+                        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    </div>
                 </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
-                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                    <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            </nav>
+        </header>
+    
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="profile-text">
+                <h1 class="profile-h1">Hello I'm</h1>
+                <p class="profile-p1">Jason Wu</p>
+                <p class="profile-p2">A student at New York University's Tandon School of Engineering 
+                    pursuing a Bachelor of Science in Computer Science with a minor in Cybersecurity.</p>
+                <div class="btn-container">
+                    <button class="btn" onclick="window.open('./assets/Jason_Wu_Resume.pdf')">Resume</button>
+                    <button class="btn" onclick="location.href='./#contact'">Contact Me</button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="My Linkedin Page" class="icons" id="linkedin"
+                    onclick="location.href='https://www.linkedin.com/in/jason-wu-3656b2241/'"/>
+                    <img src="./assets/github.png" alt="My GitHub Page" class="icons" id="github"
+                    onclick="location.href='https://github.com/jw7914'"/>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Profile Contents -->
-
-    <section class="profile">
-        <div class="profile-text">
-            <h1 class="profile-h1">Hello I'm</h1>
-            <p class="profile-p1">Jason Wu</p>
-            <p class="profile-p2">A student at New York University's Tandon School of Engineering 
-                pursuing a Bachelor of Science in Computer Science with a minor in Cybersecurity.</p>
-            <div class="btn-container">
-                <button class="btn" onclick="window.open('./assets/Jason_Wu_Resume.pdf')">Resume</button>
-                <button class="btn" onclick="location.href='./#contact'">Contact Me</button>
+            <div class="profile-pic-container">
+                <img src="./assets/1696481973145.jpeg" alt="Picture of Me">
             </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin Page" class="icons" id="linkedin"
-                onclick="location.href='https://www.linkedin.com/in/jason-wu-3656b2241/'"/>
-                <img src="./assets/github.png" alt="My GitHub Page" class="icons" id="github"
-                onclick="location.href='https://github.com/jw7914'"/>
+            
+        </section>
+        <hr class="solid">
+    
+        <!-- About Section 
+    
+        <section class="about" id="about">
+        </section> 
+        <hr class="solid">-->
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h1 class="section-text">Skills</h1>
+        </section>
+        <hr class="solid">
+
+
+        <!-- Certificates Section -->
+        <section>
+            
+        </section>
+
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <h1 class="section-text">Projects</h1>
+            <div class="projects-container hidden">
+                <div class="project-container project-card">
+                <img
+                    src="assets/database_project.png"
+                    alt="Project One Image"
+                    class="project-pic"
+                />
+                <h3 class="project-title">Jail Database</h3>
+                <p class="project-details">
+                    Work In Progress
+                </p>
+                <button class="project-btn" onclick="location.href='https://github.com/jw7914/Jail_Database'">GitHub</button>
+                <button class="project-btn">Demo</button>
+                </div>
+                <div class="project-container project-card">
+                <img
+                    src=""
+                    alt="Project Two Image"
+                    class="project-pic"
+                />
+                <h3 class="project-title">Project Two</h3>
+                <p class="project-details">
+                    Work In Progress
+                </p>
+                <a href="#" target="_blank" class="project-link">Check it Out</a>
+                </div>
             </div>
-        </div>
-        <div class="profile-pic-container">
-            <img src="./assets/1696481973145.jpeg" alt="Picture of Me">
-        </div>
+        </section>
+        <hr class="solid">
         
-    </section>
-    <div class="separator>"></div>
+        <!-- Contact Me Section-->
+        <section class="contact-form" id="contact">
+            <h1 class="section-text">Contact Me</h1>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact">
+                <input type="hidden" name="access_key" value="0d4fd43f-3183-407a-9e0e-838aeb96e92f">
+                <input type="hidden" name="redirect" value="https://jw7914.github.io/success.html">
+                <div class="input-box">
+                    <div id="nameError" class="formError"></div>
+                    <input type="text" name="name" placeholder="Full Name" id="contact-name" />
+                    <div id="emailError" class="formError"></div>
+                    <input type="text" name="email" placeholder="Email" id="contact-email"  />
+                </div>
+                <div class="input-box">
+                    <div id="phoneError" class="formError"></div>
+                    <input type="text" name="phone number" placeholder="Phone Number (optional)" id="contact-number"/>
+                    <div id="subjectError" class="formError"></div>
+                    <input type="text" name="subject" placeholder="Subject" id="contact-subject"  />
+                </div>
+                <div class="input-box">
+                    <div id="messageError" class="formError"></div>
+                    <textarea name="message" placeholder="Your Message" id="contact-message"></textarea>
+                </div>
+                <input type="submit" value="Send Message" class="submit-contact">
+                
+                <div class="h-captcha" data-captcha="true"></div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Please fill out captcha field</p>
+                    </div>
+                  
+                </div>
+            </form>
 
-    <!-- About Contents 
+        </section>
 
-    <section class="about" id="about">
-    </section> -->
+    </div>
 
-    <hr class="solid">
-
-    <!-- Skills Contents -->
-    <section class="skills">
-        <h1 class="section-text">Skills</h1>
-
-    </section>
 
     <script defer src="./js/contactForm.js"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
