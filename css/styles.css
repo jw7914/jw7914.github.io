@@ -19,11 +19,11 @@ p {
     color: rgb(85,85,85);
 }
 
-.separator {
-    border-bottom: 1px solid grey;
-    margin: 20px auto;
+hr.solid {
+    border-top: 1px solid #bbb;
     width: 90%;
-}
+    margin: 20px auto;
+  }
 
 a, .btn {
     transition: all 300ms ease;
@@ -33,8 +33,26 @@ a, .btn {
     position: fixed;
     width: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 3);
-    opacity: 90%;
+    opacity: 98%;
+    backdrop-filter: blur(10rem);
 }
+
+/* Sections */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-text {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size:  36px;
+}
+
 /* ---------- Navbar ---------- */
 /* Desktop */
 
@@ -165,6 +183,95 @@ nav {
     opacity: 1;
 }
 
+/* ---------- Profile ---------- */
+.profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+    padding: 12rem 12rem 0;
+}
 
+.profile-pic-container {
+    display: flex;
+    height: 50vh;
+    width: 50vh;
+    margin: auto 0;
+}
 
+.profile-pic-container img {
+    border-radius: 100%;
+}
+
+.profile-text {
+    align-self: center;
+    text-align: center;
+}
+
+.profile-text p {
+    font-weight: 600;
+}
+
+.profile-h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 0.1rem;
+}
+
+.profile-p1 {
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+}
+ 
+.profile-p2 {
+    font-size: 1rem;
+    text-align: center;
+}
+/* Icons */
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.icons {
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+#github, #linkedin {
+    border-radius: 100%;
+}
+
+.icons:hover {
+    cursor: pointer;
+    box-shadow: 0 0 35px black;
+}
+
+/* Buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.btn {
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    border: rgb(53,53,53) 0.15rem solid;
+    background-color: black;
+    color:white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color:black;
+}
 

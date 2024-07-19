@@ -12,11 +12,13 @@
     <script defer src="./js/nav.js"></script>
 </head>
 <body>
+
+    <!-- Navbar Contents -->
     <header class="header desktop">
         <nav class="desktop-nav">
             <div class="logo"><a href="#profile">Jason Wu</a></div>
             <ul class="nav-links">
-                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -32,7 +34,7 @@
                     <span></span>
                 </div>
                 <div class="menu-links">
-                    <li><a href="#aboutme" onclick="toggleMenu()">About Me</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
                     <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                     <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
                     <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -41,8 +43,44 @@
         </nav>
     </header>
 
+    <!-- Profile Contents -->
 
+    <section class="profile">
+        <div class="profile-text">
+            <h1 class="profile-h1">Hello I'm</h1>
+            <p class="profile-p1">Jason Wu</p>
+            <p class="profile-p2">A student at New York University's Tandon School of Engineering 
+                pursuing a Bachelor of Science in Computer Science with a minor in Cybersecurity.</p>
+            <div class="btn-container">
+                <button class="btn" onclick="window.open('./assets/Jason_Wu_Resume.pdf')">Resume</button>
+                <button class="btn" onclick="location.href='./#contact'">Contact Me</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My Linkedin Page" class="icons" id="linkedin"
+                onclick="location.href='https://www.linkedin.com/in/jason-wu-3656b2241/'"/>
+                <img src="./assets/github.png" alt="My GitHub Page" class="icons" id="github"
+                onclick="location.href='https://github.com/jw7914'"/>
+            </div>
+        </div>
+        <div class="profile-pic-container">
+            <img src="./assets/1696481973145.jpeg" alt="Picture of Me">
+        </div>
+        
+    </section>
     <div class="separator>"></div>
+
+    <!-- About Contents 
+
+    <section class="about" id="about">
+    </section> -->
+
+    <hr class="solid">
+
+    <!-- Skills Contents -->
+    <section class="skills">
+        <h1 class="section-text">Skills</h1>
+
+    </section>
 
     <script defer src="./js/contactForm.js"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
