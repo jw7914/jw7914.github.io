@@ -471,6 +471,11 @@ nav {
     resize: none;
 }
 
+.inputs {
+    width: 50vw;
+    
+}
+
 /* The Modal (background) */
 .modal {
     display: none; 
