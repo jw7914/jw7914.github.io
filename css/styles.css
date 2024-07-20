@@ -61,6 +61,7 @@ section {
     margin-top: 3em;
     margin-bottom: 1em;
     font-size:  36px;
+    text-wrap: nowrap;
 }
 
 /* ---------- Navbar ---------- */
@@ -433,7 +434,7 @@ nav {
     margin-bottom: -1.25rem;
     margin-top: 0.75rem;
     height: 1.5rem;
-    margin-right: 49%;
+    margin-right: 48.5%;
     text-wrap: nowrap;
 }
 

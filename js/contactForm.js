@@ -5,7 +5,6 @@ const contactmessage = document.getElementById('contact-message');
 const contactsubject = document.getElementById('contact-subject');
 const contactform = document.getElementById('contact');
 const nameError = document.getElementById('nameError');
-const phoneError = document.getElementById('phoneError');
 const subjectError = document.getElementById('subjectError');
 const emailError = document.getElementById('emailError');
 const messageError = document.getElementById('messageError');
@@ -54,19 +53,10 @@ contactform.addEventListener('submit', (e) => {
         errorMessages.message = '';
     }
 
-    // Check if phone number is valid (if provided)
-    if (contactnumber.value.trim() !== '' && !isValidPhoneNum(contactnumber.value)) {
-        errorMessages.phone = 'Phone number is not valid (US Phone Numbers only)';
-    }
-    else {
-        errorMessages.phone = '';
-    }
-
     if (Object.values(errorMessages).some(msg => msg !== '')) {
         e.preventDefault();
         nameError.innerText = errorMessages.name;
         emailError.innerText = errorMessages.email;
-        phoneError.innerText = errorMessages.phone;
         subjectError.innerText = errorMessages.subject;
         messageError.innerText = errorMessages.message;
     }
