@@ -31,6 +31,18 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+
+    .formError {
+        margin-left: 10%;
+    }
+
+    .certificates-list {
+        display: flex;
+    }
+
+    #image-track {
+        display: none;
+    }
 }
 @media screen and (max-width: 800px)
     {

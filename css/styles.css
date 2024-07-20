@@ -286,8 +286,84 @@ nav {
     color:black;
 }
 
+/* ---------- Skills ---------- */
+
+.skills-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+  
+.skills-list li {
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem hsl(218, 33%, 9%);
+}
+
+.scroller {
+    max-width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.scroller[data-animated=true] {
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller_inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-block: 2rem;
+}
+
+.scroller[data-animated=true] .scroller_inner {
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+    
+}
+
 
 /* ---------- Certificates ---------- */
+.certificates-list {
+    display: none;
+}
+
+.certificates {
+    margin: 0rem;
+    overflow-y: hidden;
+}
+
+.certificates img {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    box-shadow: 0 0 25px black;
+}
+
+.certificates .view {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.certificates-list li {
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    list-style: none;
+}
+
 .certificates {
     margin: 0rem;
     overflow-x: hidden;
@@ -325,16 +401,6 @@ nav {
     color: black;
     padding: 10px;
     text-align: center;
-}
-
-.scroll {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-}
-
-.scroll h1{
-    padding-right: 20px;
 }
 
 /* ---------- Projects ---------- */

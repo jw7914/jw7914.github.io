@@ -31,14 +31,13 @@ const observer = new IntersectionObserver((entries) => {
           nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
     
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), scrollDistance);
-    const multiplier = window.innerWidth < 768 ? 3.2 : 1; // Adjust multiplier value as needed
-    const speed = window.innerWidth < 768 ? 5000 : 1200;
+    const multiplier = window.innerWidth < 1200 ? 1.75 : 1; // Adjust multiplier value as needed
     
     track.dataset.percentage = nextPercentage;
     
     track.animate({
       transform: `translate(${nextPercentage * multiplier}%)`
-    }, { duration: speed, fill: "forwards" });
+    }, { duration: 1200, fill: "forwards" });
   }
   
   window.onmousedown = e => handleOnDown(e);
@@ -52,3 +51,20 @@ const observer = new IntersectionObserver((entries) => {
   window.onmousemove = e => handleOnMove(e);
   
   window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+/* Skills animation*/
+const scrollers = document.querySelectorAll(".scroller");
+
+function addAnimation() {
+  scrollers.forEach(scroller => {
+    scroller.setAttribute("data-animated", true);
+  })
+  const scrollerInner = document.querySelector(".scroller_inner");
+  const scrollerContent = Array.from(scrollerInner.children);
+  scrollerContent.forEach(item => {
+    const dupItem = item.cloneNode(true);
+    dupItem.setAttribute('aria-hidden', true);
+    scrollerInner.appendChild(dupItem);
+  })
+}
+addAnimation()
