@@ -18,7 +18,6 @@
     }
     .profile {
         flex-direction: column;
-        flex-wrap: nowrap;
         margin-top: 20%;
         padding: 0;
         padding-top: 200px;
@@ -26,10 +25,15 @@
     }
 
     .profile-pic-container {
-        margin: 0;
-        display:inline-block;
-        justify-content: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 800px)
+    {
+    .profile-pic-container {
         display: none;
     }
-        
 }
