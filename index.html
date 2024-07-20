@@ -124,37 +124,6 @@
         <!-- Contact Me Section-->
         <section class="contact-form" id="contact">
             <h1 class="section-text">Contact Me</h1>
-            <form action="https://api.web3forms.com/submit" method="POST" id="contact">
-                <input type="hidden" name="access_key" value="0d4fd43f-3183-407a-9e0e-838aeb96e92f">
-                <input type="hidden" name="redirect" value="https://jw7914.github.io/success.html">
-                <div class="input-box">
-                    <div id="nameError" class="formError"></div>
-                    <input type="text" name="name" placeholder="Full Name" id="contact-name" />
-                    <div id="emailError" class="formError"></div>
-                    <input type="text" name="email" placeholder="Email" id="contact-email"  />
-                </div>
-                <div class="input-box">
-                    <div id="phoneError" class="formError"></div>
-                    <input type="text" name="phone number" placeholder="Phone Number (optional)" id="contact-number"/>
-                    <div id="subjectError" class="formError"></div>
-                    <input type="text" name="subject" placeholder="Subject" id="contact-subject"  />
-                </div>
-                <div class="input-box">
-                    <div id="messageError" class="formError"></div>
-                    <textarea name="message" placeholder="Your Message" id="contact-message"></textarea>
-                </div>
-                <input type="submit" value="Send Message" class="submit-contact">
-                
-                <div class="h-captcha" data-captcha="true"></div>
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                      <span class="close">&times;</span>
-                      <p>Please fill out captcha field</p>
-                    </div>
-                  
-                </div>
-            </form>
-
             <form action="https://api.web3forms.com/submit" method="POST" id="contact" class="contact">
                 <input type="hidden" name="access_key" value="0d4fd43f-3183-407a-9e0e-838aeb96e92f">
                 <input type="hidden" name="redirect" value="https://jw7914.github.io/success.html">
@@ -169,6 +138,14 @@
                 <div id="messageError" class="formError"></div>
                 <textarea name="message" placeholder="Your Message" id="contact-message" class="inputs"></textarea>
                 <button type="submit" class="submit-contact">Send Message</button>
+
+                <div class="h-captcha" data-captcha="true"></div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Please fill out captcha field</p>
+                    </div>
+                </div>
 
             </form>
 

@@ -421,59 +421,73 @@ nav {
 
 /* ---------- Contact Me ---------- */
 
-/* Buttons */
+
+
+.contact {
+    text-align: center;
+}
+
+
+.formError {
+    color: red;
+    margin-bottom: -1.25rem;
+    margin-top: 0.75rem;
+    height: 1.5rem;
+    margin-right: 49%;
+    text-wrap: nowrap;
+}
+
+.h-captcha {
+    margin-top: 2rem;
+}
+
+.inputs {
+    width: 47vw;
+    height: 3rem;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.inputs:focus {
+    border: lightskyblue 0.1rem solid;
+}
+
+.contact textarea {
+    height: 5rem;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact .h-captcha {
+    justify-content: left;
+    resize: horizontal;
+    text-align: center;
+}
+
+/* Button */
 .submit-contact {
-    font-weight: 600;
-    padding: 15px 20px;
     background-color: black;
     color: white;
     border: 2px solid transparent;
-    border-radius: 8px;
     font-size: 18px;
-    letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s ease;
     cursor: pointer;
     border-radius: 2rem;
-    width: 100%;
+    padding: 1rem 2rem;
+    width: 50vw;
+    margin-top: 1rem;
 }
 
-.btn-contact:hover {
+.submit-contact:hover {
     background-color: white;
     box-shadow: 0 0 25px white;
     color: black;
     border-color: black;
-}
-
-
-.contact-form form {
-    max-width: 50rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-.contact-form form .input-box {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-}
-
-.contact-form form .input-box input, 
-.contact-form form textarea {
-    width: 100%;
-    padding: 1em;
-    font-size: 18px;
-    color: black;
-    background-color: rgb(241, 241, 241);
-    border-radius: 1rem;
-    margin: 1rem 0;
-    resize: none;
-}
-
-.inputs {
-    width: 50vw;
-    
 }
 
 /* The Modal (background) */
@@ -521,15 +535,4 @@ nav {
     padding: 1rem;
     font-weight: bold;
     color: red;
-}
-
-.formError {
-    color: red;
-    margin-bottom: -0.9rem;
-    margin-left: 0.5rem;
-    height: 1.5rem;
-}
-
-.h-captcha {
-    margin-top: 30px;
 }
