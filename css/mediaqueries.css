@@ -15,6 +15,7 @@
 
     section {
         padding: 0px;
+        margin: 0 5rem;
     }
     .profile {
         flex-direction: column;
