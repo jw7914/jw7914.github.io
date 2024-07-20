@@ -1,4 +1,10 @@
- 
+@media screen and (max-width: 1400px) {
+    .profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .desktop-nav {
         display: none;
@@ -6,4 +12,24 @@
     .mobile-nav {
         display: flex;
     }
+
+    section {
+        padding: 0px;
+    }
+    .profile {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 20%;
+        padding: 0;
+        padding-top: 200px;
+        height: fit-content;
+    }
+
+    .profile-pic-container {
+        margin: 0;
+        display:inline-block;
+        justify-content: left;
+        display: none;
+    }
+        
 }
