@@ -10,5 +10,5 @@ export default defineConfig({
       "@": "/src",
     },
   },
-  base: "https://jw7914.github.io/",
+  base: "https://jw7914.github.io/portfolio",
 });

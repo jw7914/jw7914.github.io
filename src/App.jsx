@@ -19,6 +19,9 @@ import { WavyBackground } from "./components/ui/wavy-background";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
 import { CardsCarousel } from "./components/final/cards-carousel";
 import ProjectCards from "./components/final/project-cards";
+import { CardSpotlight } from "./components/ui/card-spotlight";
+import { CardSpotlightDemo } from "./components/final/spotlight-card";
+import { MovingSkillCards } from "./components/final/moving-cards";
 
 const App = () => {
   const projects = [
@@ -160,50 +163,7 @@ const App = () => {
       {/* Skills Section */}
       <section id="skills" className="py-42 md:py-60 p-8 max-w-6xl mx-auto">
         <SectionTitle>Skills</SectionTitle>
-        <InfiniteMovingCards
-          items={[
-            {
-              quote: "JavaScript",
-              icon: (
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                  className="w-8 h-8 inline-block mr-2 align-middle"
-                />
-              ),
-            },
-            {
-              quote: "HTML",
-              icon: (
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML5"
-                  className="w-8 h-8 inline-block mr-2 align-middle"
-                />
-              ),
-            },
-            {
-              quote: "CSS",
-              icon: (
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="CSS3"
-                  className="w-8 h-8 inline-block mr-2 align-middle"
-                />
-              ),
-            },
-            {
-              quote: "Python",
-              icon: (
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Python"
-                  className="w-8 h-8 inline-block mr-2 align-middle"
-                />
-              ),
-            },
-          ]}
-        />
+        <MovingSkillCards></MovingSkillCards>
       </section>
 
       {/* Contact Section */}
