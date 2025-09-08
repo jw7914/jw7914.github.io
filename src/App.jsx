@@ -53,8 +53,10 @@ const App = () => {
     { name: "Projects", href: "#projects", icon: <Folder size={16} /> },
   ];
 
-  const SectionTitle = ({ children }) => (
-    <h2 className="text-3xl font-bold tracking-tight text-white mb-6">
+  const SectionTitle = ({ children, className = "" }) => (
+    <h2
+      className={`text-3xl font-bold tracking-tight text-white mb-2 ${className}`}
+    >
       {children}
     </h2>
   );
@@ -83,7 +85,7 @@ const App = () => {
       {/* Hero Section */}
       <section
         id="about"
-        className="relative flex min-h-screen flex-col items-center justify-center p-8 text-center overflow-hidden"
+        className="relative flex min-h-screen flex-col items-center justify-center p-8 text-center overflow-hidden py-42 md:py-60"
       >
         <div className="absolute inset-0 z-0 opacity-10 [mask-image:radial-gradient(100%_100%_at_top,transparent,black)]">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZD0iTTAgMGgwYzI3LjYxNCAwIDUwIDIyLjM4NiA1MCA1MHYwYzAtMjcuNjE0LTIyLjM4Ni01MC01MC01MHoiIGZpbGw9IiM2YmY3YmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PC9wYXRoPjwvc3ZnPg==')] bg-[size:30px_30px] opacity-10" />
@@ -133,12 +135,12 @@ const App = () => {
       {/* Experiences Section */}
       <section
         id="experience"
-        className="relative py-24 md:py-36 px-4 md:px-0 max-w-6xl mx-auto flex flex-col items-center justify-center overflow-visible"
+        className="relative py-42 md:py-60 max-w-6xl mx-auto flex flex-col items-center justify-center overflow-visible"
       >
-        <SectionTitle className="relative z-10 text-center mt-4 mb-8">
+        <SectionTitle className="relative z-10 text-center m-0 p-0 mb-[50px]">
           Experience
         </SectionTitle>
-        <div className="relative z-10 w-full flex flex-col items-center">
+        <div className="relative z-10 w-full flex flex-col items-center m-0 p-0">
           <ContainerScroll>
             <CardsCarousel />
           </ContainerScroll>
@@ -147,7 +149,7 @@ const App = () => {
 
       {/* Projects Section */}
       <WavyBackground>
-        <section id="projects" className="py-20 md:py-32 p-8 max-w-6xl mx-auto">
+        <section id="projects" className="py-42 md:py-60 p-8 max-w-6xl mx-auto">
           <SectionTitle>Projects</SectionTitle>
           <div className="flex flex-col overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -188,7 +190,7 @@ const App = () => {
       </WavyBackground>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 md:py-32 p-8 max-w-6xl mx-auto">
+      <section id="skills" className="py-42 md:py-60 p-8 max-w-6xl mx-auto">
         <SectionTitle>Skills</SectionTitle>
         <InfiniteMovingCards
           items={[
@@ -209,7 +211,7 @@ const App = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 md:py-32 p-8 max-w-2xl mx-auto">
+      <section id="contact" className="py-42 md:py-60 p-8 max-w-2xl mx-auto">
         <SectionTitle>Contact Me</SectionTitle>
         <p className="mt-4 text-gray-400">
           Feel free to reach out to me with any inquiries or just to say hello!
