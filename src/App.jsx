@@ -18,6 +18,7 @@ import {
 import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 import { WavyBackground } from "./components/ui/wavy-background";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
+import { CardsCarousel } from "./components/final/cards-carousel";
 
 const App = () => {
   const projects = [
@@ -93,7 +94,7 @@ const App = () => {
             <TypeWriterName className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight" />
           </div>
 
-          <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-400 max-w-xs sm:max-w-md md:max-w-2xl mx-auto px-2 sm:px-4 text-center">
             A student at New York University's Tandon School of Engineering
             pursuing a Bachelor of Science in Computer Science with a minor in
             Cybersecurity.
@@ -130,72 +131,25 @@ const App = () => {
       </section>
 
       {/* Experiences Section */}
-      <WavyBackground className="max-w-4xl mx-auto pb-40">
-        <section
-          id="experience"
-          className="py-20 md:py-32 p-8 max-w-4xl mx-auto"
-        >
-          <SectionTitle>Experience</SectionTitle>
-          <div className="space-y-8">
-            {/* Example Experience Card 1 */}
-            <div className="rounded-xl border border-gray-800 bg-gray-900/50 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:border-gray-700 hover:bg-gray-900">
-              <div className="flex items-center space-x-3 mb-2">
-                <Code size={20} className="text-purple-400" />
-                <h3 className="text-lg font-semibold text-white">
-                  Software Engineering Intern
-                </h3>
-              </div>
-              <div className="flex items-center text-sm text-gray-400 mb-2">
-                <span>Acme Corp</span>
-                <span className="mx-2">•</span>
-                <span>June 2024 - August 2024</span>
-              </div>
-              <ul className="list-disc list-inside text-gray-400 text-base pl-2">
-                <li>
-                  Developed interactive web features using React and TypeScript.
-                </li>
-                <li>
-                  Collaborated with designers to deliver a seamless user
-                  experience.
-                </li>
-                <li>
-                  Optimized application performance, reducing load times by 30%.
-                </li>
-              </ul>
-            </div>
-            {/* Example Experience Card 2 */}
-            <div className="rounded-xl border border-gray-800 bg-gray-900/50 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:border-gray-700 hover:bg-gray-900">
-              <div className="flex items-center space-x-3 mb-2">
-                <Code size={20} className="text-purple-400" />
-                <h3 className="text-lg font-semibold text-white">
-                  Research Assistant
-                </h3>
-              </div>
-              <div className="flex items-center text-sm text-gray-400 mb-2">
-                <span>NYU Tandon School of Engineering</span>
-                <span className="mx-2">•</span>
-                <span>Jan 2024 - May 2024</span>
-              </div>
-              <ul className="list-disc list-inside text-gray-400 text-base pl-2">
-                <li>
-                  Assisted in cybersecurity research and published findings in a
-                  student journal.
-                </li>
-                <li>
-                  Built data visualization tools for research analysis using
-                  D3.js.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </WavyBackground>
+      <section
+        id="experience"
+        className="relative py-24 md:py-36 px-4 md:px-0 max-w-6xl mx-auto flex flex-col items-center justify-center overflow-visible"
+      >
+        <SectionTitle className="relative z-10 text-center mt-4 mb-8">
+          Experience
+        </SectionTitle>
+        <div className="relative z-10 w-full flex flex-col items-center">
+          <ContainerScroll>
+            <CardsCarousel />
+          </ContainerScroll>
+        </div>
+      </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 md:py-32 p-8 max-w-6xl mx-auto">
-        <SectionTitle>Projects</SectionTitle>
-        <div className="flex flex-col overflow-hidden">
-          <ContainerScroll>
+      <WavyBackground>
+        <section id="projects" className="py-20 md:py-32 p-8 max-w-6xl mx-auto">
+          <SectionTitle>Projects</SectionTitle>
+          <div className="flex flex-col overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
               {projects.map((project, index) => (
                 <div
@@ -229,9 +183,9 @@ const App = () => {
                 </div>
               ))}
             </div>
-          </ContainerScroll>
-        </div>
-      </section>
+          </div>
+        </section>
+      </WavyBackground>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 md:py-32 p-8 max-w-6xl mx-auto">
