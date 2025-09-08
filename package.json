@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://jw7914.github.io/portfolio/",
+  "homepage": "https://jw7914-portfolio.vercel.app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-three/fiber": "^9.3.0",
     "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/vite": "^4.1.13",

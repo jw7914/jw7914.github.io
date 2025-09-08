@@ -14,42 +14,13 @@ import {
   GithubButton,
   LinkedInButton,
 } from "./components/final/animated-buttons";
-import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 import { WavyBackground } from "./components/ui/wavy-background";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
 import { CardsCarousel } from "./components/final/cards-carousel";
 import ProjectCards from "./components/final/project-cards";
-import { CardSpotlight } from "./components/ui/card-spotlight";
-import { CardSpotlightDemo } from "./components/final/spotlight-card";
 import { MovingSkillCards } from "./components/final/moving-cards";
 
 const App = () => {
-  const projects = [
-    {
-      title: "Aurora Engine",
-      description:
-        "A custom-built 3D rendering engine for interactive web experiences.",
-      tags: ["React", "Three.js", "Shader"],
-    },
-    {
-      title: "Quantum Ledger",
-      description:
-        "A secure, decentralized ledger system for small-scale transactions.",
-      tags: ["TypeScript", "Solidity", "Web3"],
-    },
-    {
-      title: "Cosmic Canvas",
-      description:
-        "An AI-powered creative tool that generates unique art from text prompts.",
-      tags: ["Next.js", "Tailwind", "Python", "AI"],
-    },
-    {
-      title: "Aero Dynamics",
-      description: "Data visualization platform for real-time wind patterns.",
-      tags: ["D3.js", "WebGL", "GIS"],
-    },
-  ];
-
   const navigation = [
     { name: "About", href: "#about", icon: <User size={16} /> },
     { name: "Experience", href: "#experience", icon: <Briefcase size={16} /> },
@@ -172,21 +143,28 @@ const App = () => {
         <p className="mt-4 text-gray-400">
           Feel free to reach out to me with any inquiries or just to say hello!
         </p>
-        <form className="mt-8 space-y-4">
+        <form
+          className="mt-8 space-y-4"
+          action="https://formspree.io/f/mrbarneb"
+          method="POST"
+        >
           <input
             type="text"
             placeholder="Your Name"
             className="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
+            name="name"
           />
           <input
             type="email"
             placeholder="Your Email"
             className="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
+            name="email"
           />
           <textarea
             placeholder="Your Message"
             rows="5"
             className="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
+            name="message"
           />
           <button
             type="submit"
