@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   ArrowUpRight,
   Code,
@@ -20,7 +21,33 @@ import { CardsCarousel } from "./components/final/cards-carousel";
 import ProjectCards from "./components/final/project-cards";
 import { MovingSkillCards } from "./components/final/moving-cards";
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const App = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setError(false);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        setLoading(false);
+        setSuccess(true);
+        form.current.reset();
+      },
+      (error) => {
+        setLoading(false);
+        setError(true);
+      }
+    );
+  };
   const navigation = [
     { name: "About", href: "#about", icon: <User size={16} /> },
     { name: "Experience", href: "#experience", icon: <Briefcase size={16} /> },
@@ -143,36 +170,47 @@ const App = () => {
         <p className="mt-4 text-gray-400">
           Feel free to reach out to me with any inquiries or just to say hello!
         </p>
-        <form
-          className="mt-8 space-y-4"
-          action="https://formspree.io/f/mrbarneb"
-          method="POST"
-        >
+        <form ref={form} className="mt-8 space-y-4" onSubmit={sendEmail}>
           <input
             type="text"
+            name="name"
+            id="name"
             placeholder="Your Name"
             className="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
-            name="name"
+            required
           />
           <input
             type="email"
+            name="email"
+            id="email"
             placeholder="Your Email"
             className="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
-            name="email"
+            required
           />
           <textarea
+            name="Message"
+            id="Message"
             placeholder="Your Message"
             rows="5"
             className="w-full rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-500 focus:outline-none"
-            name="message"
+            required
           />
           <button
             type="submit"
             className="group inline-flex w-full items-center justify-center rounded-full border border-gray-700 bg-gray-900 px-6 py-3 text-white transition-colors duration-200 hover:bg-gray-800"
+            disabled={loading}
           >
             <Mail size={16} className="mr-2" />
-            <span>Send Message</span>
+            <span>{loading ? "Sending..." : "Send Message"}</span>
           </button>
+          {success && (
+            <p className="text-green-400">Message sent successfully!</p>
+          )}
+          {error && (
+            <p className="text-red-400">
+              Failed to send message. Please try again.
+            </p>
+          )}
         </form>
       </section>
 
