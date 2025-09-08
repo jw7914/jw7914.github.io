@@ -10,18 +10,13 @@ import {
   Briefcase,
 } from "lucide-react";
 import { TypeWriterName } from "./components/final/typewriter-text";
+import { AnimatedProjectPin } from "./components/final/animated-pin";
 import {
-  HoverGithubButton,
-  HoverLinkedinButton,
-} from "./components/final/hover-buttons";
+  GithubButton,
+  LinkedInButton,
+} from "./components/final/animated-buttons";
 
 const App = () => {
-  const socialLinks = [
-    { name: "GitHub", url: "#" },
-    { name: "LinkedIn", url: "#" },
-    { name: "Twitter", url: "#" },
-  ];
-
   const projects = [
     {
       title: "Aurora Engine",
@@ -61,7 +56,7 @@ const App = () => {
   );
 
   const FloatingNav = () => (
-    <nav className="fixed inset-x-0 top-6 z-50 mx-auto w-fit">
+    <nav className="fixed inset-x-0 top-6 z-[9999] mx-auto w-fit">
       <div className="flex items-center space-x-4 rounded-full border border-gray-700 bg-gray-900/50 px-4 py-2 backdrop-blur-md">
         {navigation.map((item) => (
           <a
@@ -106,7 +101,7 @@ const App = () => {
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-              <HoverGithubButton></HoverGithubButton>
+              <GithubButton></GithubButton>
             </a>
 
             <a
@@ -115,7 +110,7 @@ const App = () => {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <HoverLinkedinButton></HoverLinkedinButton>
+              <LinkedInButton></LinkedInButton>
             </a>
           </div>
           <div className="mt-4 flex justify-center">
@@ -258,7 +253,7 @@ const App = () => {
       </section>
 
       <footer className="py-8 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+        &copy; {new Date().getFullYear()} Jason Wu. All rights reserved.
       </footer>
     </div>
   );
