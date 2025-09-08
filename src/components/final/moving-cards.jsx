@@ -2,12 +2,15 @@
 
 import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+import { CardSpotlight } from "../ui/card-spotlight";
 
 export function MovingSkillCards() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={skills} direction="right" speed="medium" />
-    </div>
+    <CardSpotlight>
+      <div className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards items={skills} direction="right" speed="medium" />
+      </div>
+    </CardSpotlight>
   );
 }
 
