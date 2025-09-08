@@ -10,7 +10,6 @@ import {
   Briefcase,
 } from "lucide-react";
 import { TypeWriterName } from "./components/final/typewriter-text";
-import { AnimatedProjectPin } from "./components/final/animated-pin";
 import {
   GithubButton,
   LinkedInButton,
@@ -19,6 +18,7 @@ import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 import { WavyBackground } from "./components/ui/wavy-background";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
 import { CardsCarousel } from "./components/final/cards-carousel";
+import ProjectCards from "./components/final/project-cards";
 
 const App = () => {
   const projects = [
@@ -152,39 +152,7 @@ const App = () => {
         <section id="projects" className="py-42 md:py-60 p-8 max-w-6xl mx-auto">
           <SectionTitle>Projects</SectionTitle>
           <div className="flex flex-col overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-              {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group rounded-xl border border-gray-800 bg-gray-900/50 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:border-gray-700 hover:bg-gray-900"
-                >
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Code size={24} className="text-cyan-400" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {project.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="rounded-full bg-gray-800 px-3 py-1 text-xs font-medium text-gray-400"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href="#"
-                    className="mt-4 inline-flex items-center text-sm font-medium text-white transition-colors duration-200 hover:text-cyan-400"
-                  >
-                    <span>View Project</span>
-                    <ArrowUpRight size={14} className="ml-1" />
-                  </a>
-                </div>
-              ))}
-            </div>
+            <ProjectCards></ProjectCards>
           </div>
         </section>
       </WavyBackground>
