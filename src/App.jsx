@@ -15,6 +15,7 @@ import {
   GithubButton,
   LinkedInButton,
 } from "./components/final/animated-buttons";
+import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 
 const App = () => {
   const projects = [
@@ -218,6 +219,27 @@ const App = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20 md:py-32 p-8 max-w-6xl mx-auto">
+        <SectionTitle>Skills</SectionTitle>
+        <InfiniteMovingCards
+          items={[
+            {
+              quote: "JavaScript",
+            },
+            {
+              quote: "HTML",
+            },
+            {
+              quote: "CSS",
+            },
+            {
+              quote: "Python",
+            },
+          ]}
+        />
       </section>
 
       {/* Contact Section */}
