@@ -72,7 +72,7 @@ export const Card = ({ rotate, scale, children }) => {
       }}
       className="w-[98vw] sm:w-[96vw] md:w-[90vw] max-w-md sm:max-w-4xl md:max-w-5xl lg:max-w-[70vw] -mt-8 sm:-mt-16 mx-auto h-[52rem] sm:h-[56rem] md:h-[64rem] border-4 border-[#6C6C6C] p-2 sm:p-4 md:p-12 bg-[#222222] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] shadow-2xl"
     >
-      <div className="h-full w-full overflow-hidden rounded-xl sm:rounded-2xl md:rounded-2xl p-2 sm:p-4 md:p-8 bg-gray-100 dark:bg-zinc-900">
+      <div className="h-full w-full overflow-hidden rounded-xl sm:rounded-2xl md:rounded-2xl p-2 sm:p-4 md:p-8 bg-gray-100 bg-zinc-900">
         {children}
       </div>
     </motion.div>

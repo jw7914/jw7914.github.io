@@ -80,7 +80,10 @@ const App = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-300 antialiased font-inter">
+    <div
+      className="min-h-screen bg-gray-950 text-gray-300 antialiased font-inter"
+      style={{ colorScheme: "dark" }}
+    >
       <FloatingNav />
 
       {/* Hero Section */}

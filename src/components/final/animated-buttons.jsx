@@ -9,7 +9,7 @@ export function GithubButton() {
       <Button
         borderRadius="1.75rem"
         duration={3000} // Faster animation
-        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer"
+        className="bg-slate-900 text-white border-slate-800 cursor-pointer"
       >
         <Github size={24} />
       </Button>
@@ -23,7 +23,7 @@ export function LinkedInButton() {
       <Button
         borderRadius="1.75rem"
         duration={4000} // Slower animation
-        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer"
+        className="bg-slate-900 text-white border-slate-800 cursor-pointer"
       >
         <Linkedin size={24} />
       </Button>
