@@ -8,7 +8,7 @@ export function GithubButton() {
     <div>
       <Button
         borderRadius="1.75rem"
-        duration={3000} // Faster animation
+        duration={2000} // Faster animation
         className="bg-slate-900 text-white border-slate-800 cursor-pointer"
       >
         <Github size={24} />
