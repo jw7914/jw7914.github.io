@@ -8,7 +8,7 @@ export function GithubButton() {
     <div>
       <Button
         borderRadius="1.75rem"
-        duration={2000} // Faster animation
+        duration={2000}
         className="bg-slate-900 text-white border-slate-800 cursor-pointer"
       >
         <Github size={24} />
@@ -22,7 +22,7 @@ export function LinkedInButton() {
     <div>
       <Button
         borderRadius="1.75rem"
-        duration={4000} // Slower animation
+        duration={4000}
         className="bg-slate-900 text-white border-slate-800 cursor-pointer"
       >
         <Linkedin size={24} />
